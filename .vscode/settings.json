@@ -3,5 +3,24 @@
     "**/node_modules": true,
     "**/bower_components": true,
     "**/.sfdx": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.apivcs": true,
+    "**/.designer.json": true,
+    "**/.exchange_modules_tmp": true,
+    "**/.exchange.xml": true,
+    "**/.mvn": true,
+    "**/.settings": true,
+    "**/.tmp": true,
+    ".mule": true
+  },
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#2f53a8",
+    "activityBar.background": "#2f53a8"
   }
 }
