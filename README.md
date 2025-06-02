@@ -27,7 +27,6 @@ The Coral Cloud Resorts app requires licenses for the following features:
 - Data Cloud
 - Agents
 - Prompt Builder field generation templates
-- Einstein for Sales (for Prompt Builder sales emails)
 
 <div>
     <img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70,w_50/learn/projects/quick-start-explore-the-coral-cloud-sample-app/1a059541a60d078109227d8f3a83404a_badge.png" align="left" alt="Trailhead Badge"/>
@@ -55,13 +54,19 @@ If you need to [update the Salesforce CLI](https://developer.salesforce.com/docs
 
 1. From **Setup**, go to **Einstein Setup** and click **Turn on Einstein**.
 
+1. From **Setup**, go to **Einstein Bots**, and click **Enable Einstein Bots**.
+
 1. From **Setup**, go to **Agentforce Agents**. You may need to refresh the page to see the Agentforce Agents menu after turning on Einstein.
 
 1. Toggle on **Agentforce**.
 
 1. Toggle on **Enable the Agentforce (Default) Agent**.
 
-1. From **Setup**, go to **Einstein for Sales** and ensure that **Turn on Sales Emails** is toggled on.
+1. Enable Digital Experiences:
+    - Go to **Setup** > **Digital Experiences** > **Settings** > Toggle **Enable Digital Experiences**.
+
+1. Refresh the page and enable ExperienceBundle Metadata API:
+    - Go to **Setup** > **ExperienceBundle Metadata API** > Toggle **Enable ExperienceBundle Metadata API**.
 
 ### Step 2. Base metadata deployment
 
@@ -119,6 +124,39 @@ If you need to [update the Salesforce CLI](https://developer.salesforce.com/docs
     ```bash
     sf org open
     ```
+
+1. Run the ./bin/install-service.sh script 
+    - Deploys Coral Cloud Service App, Coral Cloud Experience Site, and Coral Cloud Agent
+
+1. Activate the Agent
+    - From **Setup**, go to **Agentforce Agents** > Click the **Coral Cloud Agent**
+    - Click **Open in Builder**
+    - CLick **Activate** in top right then navigate back to **Setup**
+
+1. Enable Messaging 
+    - From **Setup**, go to **Messaging Settings**, and toggle it ON.
+    - Click **Agent Channel** from list and click **Edit**
+    - Click **Activate** in the top right (check box and accept)
+
+1. Publish Embedded Service Deployment 
+    - From **Setup**, go to **Embedded Service Deployments**
+    - Click **Publish** in the top right
+
+1. Publish Experience Cloud (Coral Cloud) Site
+    - From **Setup**, go to **All Sites**, click on **Builder** next to Coral Cloud site
+    - Click the hamburger icon on the left (underneath the paint brush) and confirm **Embedded Messaging** is somewhere in the page structure
+        - IF it is not there, click the Lightning Bolt icon and search for **Embeddeded Messaging** and drag-and-drop it anywhere on the page (confirming defaults)
+    - Click **Publish** > **Publish** > **Got it**
+
+1. Once email confirmation has arrived, confirm smoke test:
+    EITHER (Manual)
+    - From **Setup**, go to **All Sites**, then click on the URL for the Coral Cloud app under the **URL** column 
+    - May require refresh a few times, but confirm presence of Embedded Chat icon and test agent loads properly in the chat. 
+    - Make sure the agent is able to retrieve information on Coral Cloud objects and book experiences.
+    OR (Provar)
+    - Open Agentforce project from mrdailey99/Agentforce and create a branch "MYNAME"
+    - Launch Provar Automation V3 and override the Admin and Experience Cloud connections to Org specific users
+    - Run the test "tests/Demos/Book a Session - Coral Cloud Resort.testcase"
 
 ## Troubleshooting
 
