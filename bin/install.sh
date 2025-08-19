@@ -23,19 +23,6 @@ fi
 sf org open -p lightning/setup/SetupOneHome/home?setupApp=audience360
 echo ""
 
-# Wait for DC activation
-echo "STOP: wait for Data Cloud deployment completion before moving forward."
-echo "You can check progress in Data Cloud Setup."
-read -p "Is Data Cloud is fully enabled? [yY]: " -n 1 -r
-echo ""
-echo ""
-# Abort if not ready
-if [[ $REPLY =~ ^[^Yy]$ ]]
-then
-  echo "Installation aborted."
-  exit 1
-fi
-
 # Confirm feature activation
 echo "STOP: ensure that you've toggled on the following features:"
 echo " * Einstein"
@@ -61,14 +48,6 @@ echo "" && \
 
 echo "Assigning permission sets..." && \
 sf org assign permset -n Coral_Cloud && \
-echo "" && \
-
-echo "Importing sample data..." && \
-sf data tree import -p data/data-plan.json && \
-echo "" && \
-
-echo "Generate additional sample data..." && \
-sf apex run -f apex-scripts/setup.apex && \
 echo "" && \
 
 echo "Installing Data Kit..." && \

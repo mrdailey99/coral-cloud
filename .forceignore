@@ -10,7 +10,6 @@ package.xml
 **/appSwitcher/**
 **/flowDefinitions/**
 **/objectTranslations/**
-**/profiles/**
 **/profilePasswordPolicies/**
 **/profileSessionSettings/**
 **/settings/**

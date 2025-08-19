@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Default</label>
+    <protected>false</protected>
+    <values>
+        <field>provar__Delete_Coverage_Reports_Older_Than__c</field>
+        <value xsi:type="xsd:double">60.0</value>
+    </values>
+    <values>
+        <field>provar__Delete_Test_Cycles_Older_Than__c</field>
+        <value xsi:type="xsd:double">60.0</value>
+    </values>
+    <values>
+        <field>provar__Delete_Test_Step_Executions_Older_Than__c</field>
+        <value xsi:type="xsd:double">60.0</value>
+    </values>
+    <values>
+        <field>provar__Enable_Azure_DevOps_API_Connection__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>provar__Enable_Bitbucket_API_Connection__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>provar__Enable_GitHub_API_Connection__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>provar__Enable_GitLab_API_Connection__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>provar__Enable_OpenAI_API_Connection__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>provar__Enable_Provar_Manager_API__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>provar__Enable_Slack_API_Connection__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>provar__OpenAI_API_Key__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>provar__Provar_Automation_License_Key__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>provar__Provar_Grid_API_Key__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>provar__Provar_Grid_Username__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>provar__Provar_Manager_API_Authentication_Method__c</field>
+        <value xsi:type="xsd:string">None</value>
+    </values>
+    <values>
+        <field>provar__Provar_Manager_API_Key__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

@@ -23,6 +23,9 @@
 .nav ul li a:hover {
     text-decoration: underline;
 }
+.nav ul li a[href^="/s/createrecord"] {
+    font-weight: 700;
+}
 .book-now {
     background-color: #04545f !important;
     color: #ffffff !important;

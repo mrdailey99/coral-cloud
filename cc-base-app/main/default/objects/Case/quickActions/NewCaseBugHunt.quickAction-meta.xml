@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Bug Hunt Case create action for Experience createRecord route</description>
+    <label>New Case (Bug Hunt)</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <quickActionLayoutType>Full</quickActionLayoutType>
+        <layoutSection>
+            <label>New Case (Bug Hunt)</label>
+            <layoutColumns>
+                <layoutItems>
+                    <field>Subject</field>
+                </layoutItems>
+                <layoutItems>
+                    <field>Origin</field>
+                </layoutItems>
+            </layoutColumns>
+            <layoutColumns>
+                <layoutItems>
+                    <field>Description</field>
+                </layoutItems>
+            </layoutColumns>
+            <style>TwoColumnsTopToBottom</style>
+        </layoutSection>
+    </quickActionLayout>
+    <targetObject>Case</targetObject>
+    <type>Create</type>
+</QuickAction>

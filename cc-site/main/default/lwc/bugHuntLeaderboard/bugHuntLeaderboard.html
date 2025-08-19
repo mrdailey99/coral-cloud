@@ -1,0 +1,76 @@
+<template>
+    <lightning-card title="Bug Hunt Leaderboard" icon-name="custom:custom74" class="provar-leaderboard">
+        <div class="slds-p-around_small">
+            <div class="slds-grid slds-gutters slds-m-bottom_small">
+                <div class="slds-col slds-grow">
+                    <lightning-input type="search" label="Search" value={search} onchange={handleSearch}></lightning-input>
+                </div>
+                <template if:true={isAdmin}>
+                    <div class="slds-col">
+                        <lightning-button variant="destructive" label="Clear Leaderboard" onclick={handleClear}></lightning-button>
+                    </div>
+                </template>
+            </div>
+            <template if:true={reporterSummary.length}>
+                <div class="slds-text-title_caps slds-m-bottom_x-small">Top reporters</div>
+                <ul class="slds-m-bottom_small">
+                    <template for:each={reporterSummary} for:item="r">
+                        <li key={r.name} class="pill">{r.name}: {r.count}</li>
+                    </template>
+                </ul>
+            </template>
+            <template if:true={rows.length}>
+                <lightning-datatable key-field="Id" data={rows} columns={columns} hide-checkbox-column sorted-by={sortBy} sorted-direction={sortDirection} onsort={handleSort} onrowaction={handleRowAction}></lightning-datatable>
+            </template>
+            <template if:false={rows.length}>
+                <p>No bug reports yet.</p>
+            </template>
+        </div>
+    </lightning-card>
+
+    <!-- Details Modal -->
+    <template if:true={showDetails}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-label="Bug Report Details" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header provar-header">
+                    <h2 class="slds-text-heading_medium">Bug report details</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <template if:true={detailSummary}>
+                        <p class="slds-text-title_bold slds-m-bottom_small">{detailSummary}</p>
+                    </template>
+                    <lightning-tabset active-tab-value="after">
+                        <lightning-tab label="After (saved)" value="after">
+                            <template if:true={detailAfter.length}>
+                                <dl class="kv">
+                                    <template for:each={detailAfter} for:item="i">
+                                        <div key={i.label} class="kv__row"><dt>{i.label}</dt><dd>{i.value}</dd></div>
+                                    </template>
+                                </dl>
+                            </template>
+                            <template if:false={detailAfter.length}>
+                                <p>No saved values parsed.</p>
+                            </template>
+                        </lightning-tab>
+                        <lightning-tab label="Before (user input)" value="before">
+                            <template if:true={detailBefore.length}>
+                                <dl class="kv">
+                                    <template for:each={detailBefore} for:item="i">
+                                        <div key={i.label} class="kv__row"><dt>{i.label}</dt><dd>{i.value}</dd></div>
+                                    </template>
+                                </dl>
+                            </template>
+                            <template if:false={detailBefore.length}>
+                                <p>No input values parsed.</p>
+                            </template>
+                        </lightning-tab>
+                    </lightning-tabset>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning-button variant="brand" label="Close" onclick={closeDetails}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

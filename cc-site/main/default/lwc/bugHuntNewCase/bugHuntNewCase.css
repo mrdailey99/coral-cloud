@@ -1,0 +1,10 @@
+.provar-theme {
+  /* Provar-inspired accents */
+  --brand-accessible: #e8356d; /* highlight */
+  border: 2px dashed var(--brand-accessible);
+  border-radius: 0.5rem;
+}
+.provar-title {
+  color: var(--brand-accessible);
+  font-weight: 700;
+}

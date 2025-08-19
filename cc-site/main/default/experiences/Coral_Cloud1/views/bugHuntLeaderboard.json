@@ -1,0 +1,54 @@
+{
+  "appPageId" : "3fd94595-dce8-4901-aab5-45a5da4ee529",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "729b5c4a-4c4e-4805-9363-e3fa880b178b",
+  "label" : "Bug Hunt Leaderboard",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:siteHeader",
+      "id" : "45c9cb26-2c43-49f3-8e7f-6b451391cf56",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1131e095-ac31-4c27-8b61-f22c0d4aa79e",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:bugHuntLeaderboard",
+      "id" : "9a7c5dd5-92f0-44bb-bcad-d189c167ba9b",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3cda2d67-a188-486c-83b0-892010df8dd5",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "1b78bee5-1d4b-4e6d-92e5-95d2dbafd1c0",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Bug Hunt Leaderboard"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "5241f5dc-e68e-41fb-bcb7-e1f3e4e51209",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "64ef71cc-0140-46c6-86a2-cb7375985982",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-bug-hunt-leaderboard"
+}

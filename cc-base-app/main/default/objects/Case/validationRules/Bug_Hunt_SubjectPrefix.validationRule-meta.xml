@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bug_Hunt_SubjectPrefix</fullName>
+    <active>true</active>
+    <description>Require Subject to start with BUG- for Bug Hunt</description>
+    <errorConditionFormula>
+        AND(
+            ISNEW(),
+            NOT(BEGINS(Subject, "BUG-"))
+        )
+    </errorConditionFormula>
+    <errorDisplayField>Subject</errorDisplayField>
+    <errorMessage>Subject must start with BUG- (e.g., BUG-123)</errorMessage>
+</ValidationRule>

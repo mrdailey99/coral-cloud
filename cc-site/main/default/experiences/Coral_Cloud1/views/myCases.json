@@ -1,0 +1,46 @@
+{
+  "appPageId" : "3fd94595-dce8-4901-aab5-45a5da4ee529",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "3a2b1c90-1234-4def-8abc-55aa66bb77cc",
+  "label" : "My Cases",
+  "regions" : [ {
+    "id" : "11111111-2222-3333-4444-555555555555",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "enableInlineEdit" : true,
+        "filterName" : "Recent",
+        "layout" : "FULL",
+        "pageSize" : 25,
+        "scope" : "Case",
+        "showActionBar" : true,
+        "showChartsPanel" : false,
+        "showDisplay" : "showall",
+        "showFilterPanel" : true,
+        "showImageIcon" : true,
+        "showManualRefreshButton" : true,
+        "showObjectName" : true,
+        "showPinnedList" : true,
+        "showSearchBar" : true
+      },
+      "componentName" : "forceCommunity:objectHome",
+      "id" : "22222222-3333-4444-5555-666666666666",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "77777777-8888-9999-0000-aaaaaaaaaaaa",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "bbbbbbbb-cccc-dddd-eeee-ffffffffffff",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "list"
+}

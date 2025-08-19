@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "729b5c4a-4c4e-4805-9363-e3fa880b178b",
+  "appPageId" : "3fd94595-dce8-4901-aab5-45a5da4ee529",
+  "configurationTags" : [ ],
+  "devName" : "bug_hunt_leaderboard__c",
+  "id" : "84e3ecb1-bc64-40d6-a643-c7d2c48a0c6d",
+  "label" : "Bug Hunt Leaderboard",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-bug-hunt-leaderboard",
+  "type" : "route",
+  "urlPrefix" : "bug-hunt-leaderboard"
+}
