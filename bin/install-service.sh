@@ -24,6 +24,16 @@ else
     exit 1
 fi
 
+
+
+echo "Deploying the Experience Cloud site metadata..." && \
+sf project deploy start -d cc-site && \
+echo "" && \
+
+echo "Deploying Experience Cloud site guest profile metadata..." && \
+sf project deploy start --metadata-dir=guest-profile-metadata -w 10 && \
+echo "" && \
+
 echo "Pushing Service Agent Setup source..." && \
 sf project deploy start -d cc-service-app/main/setup/classes/SetupServiceAgentUser.cls -d cc-service-app/main/default/permissionSets/Coral_Cloud_Service_Agent.permissionset-meta.xml && \
 echo "" && \
